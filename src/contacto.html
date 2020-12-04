@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Music Festival</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+  </head>
+  <body>
+
+    <div class="app-container">
+
+      <header">
+        <nav>
+          <div class="app-nav">
+            <div class="app-nav-logo">
+              <a href="index.html"><i class="fas fa-compact-disc"></i>Music Festival</a>
+            </div>
+            <div class="app-nav-links">
+              <a href="bandas.html">Bandas</a>
+              <a href="noticias.html">Noticias</a>
+              <a class="active" href="#">Contacto</a>
+            </div>
+          </div>
+        </nav>
+      </header>
+      
+      <main>
+        <section class="main-container">
+          <form id="contacto" action="POST" data-netlify="true">
+                <div class="form-row mt-5 form-group">
+                      <label for="nombre">Nombre (requerido)</label>
+                      <input type="text" name="nombre" class="form-control" id="nombre" placeholder="" required pattern="[a-zA-ZñÑáàéèíìóòúùÁÀÉÈÍÌÓÒÚÙüÜ\s]+">
+                </div>
+                <div class="form-group">
+                    <label for="correo">Tu correo electrónico (requerido)</label>
+                    <input type="email" name="correo" class="form-control" id="correo" placeholder="" required>
+                </div>
+                <div class="form-group">
+                    <label for="asunto">Asunto</label>
+                    <input type="text" name="asunto" class="form-control" id="asunto" placeholder="" pattern="[a-zA-ZñÑáàéèíìóòúùÁÀÉÈÍÌÓÒÚÙüÜ\s]+">
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea name="mensaje" class="form-control" id="mensaje" placeholder="DNI o Passaport" pattern="[A-Za-z0-9]{5,40}">
+                </div>
+
+                <div class="form-group"></div>
+                  <button class="btn btn-primary" type="submit" name="submit">Enviar</button>
+                </div>
+          </form>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-content">
+          <div class="footer-nav">
+            <div class="footer-nav-logo">
+              <a href="index.html"><i class="fas fa-compact-disc"></i>Music Festival</a>
+            </div>
+            <div class="footer-nav-links">
+              <a href="index.html">Inicio</a>
+              <a href="bandas.html">Bandas</a>
+              <a href="noticias.html">Noticias</a>
+              <a class="active" href="#">Contacto</a>
+            </div>
+            <div class="footer-nav-social">
+              <a href="#"><i class="fab fa-google-plus-g"></i></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="other-links">
+              <a href="#">Condiciones generales</a>
+              <a href="#">Aviso legal</a>
+              <a href="#">Política de cookies</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+  </body>
+</html>

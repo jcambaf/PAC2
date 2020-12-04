@@ -1,0 +1,303 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  background: $color-bg;
+}
+
+body {
+  font-family: $font-family-sans-serif;
+  margin: 0 auto;
+}
+
+a {
+  color: white;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-align: center;
+}
+
+a:hover {
+  color: $color-hover-enlace;
+  text-decoration-color: transparent;
+}
+
+a.active {
+  pointer-events: none;
+  color: yellow;
+}
+
+p {
+  color: white;
+  text-align: justify;
+}
+
+.app-nav {
+  display: grid;
+  grid-template-columns: 300px auto;
+  min-height: 50px;
+  grid-auto-flow: column;
+}
+
+.app-nav-links a:nth-child(3) {
+  margin-right: 40px;
+}
+
+.app-nav-logo {
+  display: grid;
+  justify-content: start;
+  align-content: center;
+  grid-auto-flow: column;
+  font-size: 2em;
+  padding-left: 20px;
+}
+
+.fa-compact-disc {
+  padding-right: 5px;
+}
+
+.app-nav-links {
+  display: grid;
+  justify-content: right;
+  align-content: center;
+  grid-auto-flow: column;
+  grid-gap: 1.5em;
+  font-size: 1em;
+}
+
+.main {
+  margin: auto;
+  margin-bottom: 100px;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  align-content: center;
+  height: calc(100vh - 150px);
+}
+
+.main-bandas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.img-portada {
+  border-radius: 5px;
+  border: 1px solid white;
+  grid-column: 3 / 6;
+  grid-row: 2 / 10;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.nombre-festival {
+  background: linear-gradient(yellow, green);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 6em;
+  grid-column: 5 / 10;
+  grid-row-start: 5;
+
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.fecha-festival {
+  grid-column: 6 / 9;
+  position: relative;
+  grid-row-start: 6;
+  color: red;
+  font-size: 3em;
+
+  z-index: 2;
+  padding-left: 20px;
+}
+
+.title-bandas {
+  text-align: center;
+  font-size: 3em;
+}
+
+.main-bandas div {
+  display: flex;
+  flex-direction: column;
+}
+
+.banda {
+  max-width: 33%;
+  margin-top: 10px;
+  margin-top: 40px;
+}
+
+.nombre-banda {
+  padding-top: 10px;
+  text-align: center;
+}
+
+.estilo-banda {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.estilo-banda ~ p {
+  max-width: 90%;
+  justify-self: center;
+  margin: 0 auto;
+}
+
+.img-banda {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+article {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  max-width: 80%;
+}
+
+article > p:nth-child(2) {
+  font-size: 2em;
+  margin-bottom: 0;
+}
+
+.parrafo-articulo {
+  padding-top: 30px;
+}
+
+hr {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  height: 2px;
+  background-color: white;
+}
+
+.lista-numerada {
+  display: grid;
+  grid-template-columns: 10px auto;
+  grid-template-columns: auto auto;
+  justify-content: flex-start;
+  margin-bottom: 30px;
+}
+
+.lista-numerada p {
+  grid-column-start: 2;
+  justify-self: start;
+  margin-bottom: 0;
+}
+
+.img-articulo {
+  max-width: 90%;
+  margin: 30px auto;
+  justify-self: center;
+}
+
+.number {
+  border: 1px solid white;
+  border-radius: 0.8em;
+  -moz-border-radius: 0.8em;
+  -webkit-border-radius: 0.8em;
+  color: #fff;
+  display: inline-block;
+  font-weight: bold;
+  line-height: 1.6em;
+  margin-right: 15px;
+  text-align: center;
+  width: 1.6em;
+
+  grid-area: 1 / 1 / 2 / 1;
+}
+
+form {
+  max-width: 60%;
+  margin: 30px auto;
+  color: white;
+}
+
+.footer-nav {
+  display: grid;
+  min-height: 100px;
+  grid-template-columns: 300px auto 200px;
+}
+
+.footer-nav-logo {
+  display: grid;
+  justify-content: start;
+  align-content: center;
+  grid-auto-flow: column;
+  font-size: 2em;
+  padding-left: 20px;
+}
+
+.footer-nav-links {
+  display: grid;
+  justify-content: space-around;
+  align-content: center;
+  grid-auto-flow: column;
+  grid-gap: 1.5em;
+  font-size: 1em;
+}
+
+.footer-nav-social {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-auto-flow: column;
+  grid-gap: 1.5em;
+  font-size: 1em;
+}
+
+.other-links {
+  display: grid;
+  grid-column: 1/4;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-content: center;
+  grid-auto-flow: column;
+  margin-top: 10px;
+  font-size: 1em;
+  background-color: #333;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
